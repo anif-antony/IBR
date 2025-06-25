@@ -1,6 +1,7 @@
-
+import React from 'react';
 import { ArrowRight, Target, Users, TrendingUp } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import heroBg from '../assets/hero.png'; // Assuming you have a hero background image
 
 const Hero = () => {
   const { scrollY } = useScroll();
@@ -16,13 +17,13 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center text-white overflow-hidden">
-      <motion.div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2070&auto=format&fit=crop')`,
-          y,
-        }}
+       <motion.img
+        src={heroBg}
+        alt="Hero background"
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{ y, zIndex: 0 }}
       />
+      
       <div className="absolute inset-0 bg-blue-900/60"></div>
       
       <motion.div 
