@@ -53,8 +53,8 @@ const Header = () => {
             <img
               src={logo}
               alt="Insight Business Reengineering Logo"
-              className="mt-4 h-12 sm:h-16 lg:h-28 w-auto object-contain"
-            />
+         
+            className="mt-4 h-20 sm:h-24 md:h-28 lg:h-28 xl:h-30 2xl:h-32 w-auto object-contain"/>
           </div>
 
           <nav className="hidden lg:flex items-center space-x-8">

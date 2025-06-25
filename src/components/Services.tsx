@@ -1,17 +1,24 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { slideInFromLeft, slideInFromRight } from '../lib/utils';
-import { 
-  Briefcase, 
-  Users, 
-  UserPlus, 
-  Settings, 
-  Monitor, 
+// import { motion } from 'framer-motion';
+import {
+  Briefcase,
+  Users,
+  UserPlus,
+  Settings,
+  Monitor,
   TrendingUp,
   ChevronRight,
   CheckCircle,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
+
+// Import local images
+import businessImg from '../assets/BC.png';
+import hrImg from '../assets/HR.png';
+import recruitmentImg from '../assets/RC.png';
+import operationsImg from '../assets/OC.png';
+import itImg from '../assets/IT.png';
+import marketingImg from '../assets/MS.avif';
 
 interface Service {
   icon: LucideIcon;
@@ -34,7 +41,7 @@ const servicesData: Service[] = [
       'Process Improvement & Optimization',
       'Risk Management & Compliance',
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop'
+    imageUrl: businessImg,
   },
   {
     icon: Users,
@@ -47,7 +54,7 @@ const servicesData: Service[] = [
       'Employee Engagement & Retention',
       'Leadership Development Programs',
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop'
+    imageUrl: hrImg,
   },
   {
     icon: UserPlus,
@@ -60,7 +67,7 @@ const servicesData: Service[] = [
       'Recruitment Process Outsourcing (RPO)',
       'Executive Search & Talent Sourcing',
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2070&auto=format&fit=crop'
+    imageUrl: recruitmentImg,
   },
   {
     icon: Settings,
@@ -73,7 +80,7 @@ const servicesData: Service[] = [
       'Operations Optimization',
       'Lean Management & Efficiency Gains',
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2232&auto=format&fit=crop'
+    imageUrl: operationsImg,
   },
   {
     icon: Monitor,
@@ -86,7 +93,7 @@ const servicesData: Service[] = [
       'IT Infrastructure & System Integration',
       'Technology Roadmap Development',
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop'
+    imageUrl: itImg,
   },
   {
     icon: TrendingUp,
@@ -99,60 +106,54 @@ const servicesData: Service[] = [
       'Sales Process Optimization',
       'Customer Experience Enhancement',
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974&auto=format&fit=crop'
-  }
+    imageUrl: marketingImg,
+  },
 ];
 
 const Services = () => {
   return (
-    <section id="services" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10 sm:mb-14 lg:mb-20">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Our Services</h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+    <section id="services" className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-4">Our Services</h2>
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
             Comprehensive Business Solutions Tailored for Your Success
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-teal-500 mx-auto mt-4 sm:mt-6"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-teal-500 mx-auto mt-3 sm:mt-5"></div>
         </div>
         
-        <div className="space-y-12 sm:space-y-16 md:space-y-20 lg:space-y-32">
+        <div className="space-y-8 sm:space-y-10 md:space-y-14 lg:space-y-20">
           {servicesData.map((service, index) => (
-            <motion.div 
+            <div 
               key={index} 
-              className="grid grid-cols-1 lg:grid-cols-2 gap-y-8 sm:gap-y-10 md:gap-y-12 lg:gap-x-16 items-center"
-              // initial="hidden"
-              // whileInView="visible"
-              // viewport={{ once: true, amount: 0.25 }}
-              // transition={{ staggerChildren: 0.3 }}
+              className="grid grid-cols-1 lg:grid-cols-2 gap-y-6 sm:gap-y-8 md:gap-y-10 lg:gap-x-12 items-center"
             >
-              <motion.div 
-                className={`space-y-4 sm:space-y-6 ${index % 2 !== 0 ? 'lg:order-last' : ''}`}
-                // variants={index % 2 !== 0 ? slideInFromRight(0) : slideInFromLeft(0)}
+              <div 
+                className={`space-y-3 sm:space-y-5 ${index % 2 !== 0 ? 'lg:order-last' : ''}`}
               >
-                <div className="flex items-center space-x-3 sm:space-x-5">
-                  <div className={`bg-gradient-to-r ${service.color} p-3 sm:p-4 rounded-lg sm:rounded-xl shadow-lg flex-shrink-0`}>
-                    <service.icon className="h-7 w-7 sm:h-8 sm:w-8 text-white" />
+                <div className="flex items-center space-x-2 sm:space-x-4">
+                  <div className={`bg-gradient-to-r ${service.color} p-2 sm:p-3 rounded-lg sm:rounded-xl shadow-lg flex-shrink-0`}>
+                    <service.icon className="h-6 w-6 sm:h-7 sm:w-7 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900">{service.title}</h3>
-                    <p className="text-gray-600 mt-1 text-sm sm:text-base">{service.description}</p>
+                    <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900">{service.title}</h3>
+                    <p className="text-gray-600 mt-1 text-xs sm:text-sm md:text-base">{service.description}</p>
                   </div>
                 </div>
                 <div>
-                  <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-4">Key Services Include:</h4>
-                  <ul className="space-y-2 sm:space-y-3">
+                  <h4 className="text-xs sm:text-base font-semibold text-gray-900 mb-2 sm:mb-3">Key Services Include:</h4>
+                  <ul className="space-y-1 sm:space-y-2">
                     {service.details.map((detail, detailIndex) => (
-                      <li key={detailIndex} className="flex items-start space-x-2 sm:space-x-3">
-                        <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-green-600 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-700 text-sm sm:text-base">{detail}</span>
+                      <li key={detailIndex} className="flex items-start space-x-1 sm:space-x-2">
+                        <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700 text-xs sm:text-sm md:text-base">{detail}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-              </motion.div>
-              <motion.div 
-                className="relative h-56 sm:h-72 md:h-80 lg:h-96 rounded-lg overflow-hidden shadow-xl"
-                // variants={index % 2 !== 0 ? slideInFromLeft(0) : slideInFromRight(0)}
+              </div>
+              <div 
+                className="relative h-48 sm:h-64 md:h-80 lg:h-96 rounded-lg overflow-hidden shadow-xl"
               >
                 <img 
                   src={service.imageUrl} 
@@ -160,15 +161,15 @@ const Services = () => {
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           ))}
         </div>
         
-        <div className="text-center mt-12 sm:mt-16 lg:mt-20">
-          <div className="bg-white p-5 sm:p-8 md:p-10 rounded-2xl shadow-lg max-w-4xl mx-auto ring-1 ring-gray-100">
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">Ready to Transform Your Business?</h3>
-            <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base">
+        <div className="text-center mt-10 sm:mt-14 lg:mt-16">
+          <div className="bg-white p-4 sm:p-7 md:p-9 rounded-2xl shadow-lg max-w-3xl mx-auto ring-1 ring-gray-100">
+            <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-2 sm:mb-3">Ready to Transform Your Business?</h3>
+            <p className="text-gray-600 mb-3 sm:mb-5 text-xs sm:text-sm md:text-base">
               Whether you're looking to streamline operations, enhance HR strategies, or embrace digital transformation, 
               our experienced consultants are here to guide you every step of the way.
             </p>
@@ -177,7 +178,7 @@ const Services = () => {
                 const element = document.querySelector('#contact');
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="inline-flex items-center px-5 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-blue-600 to-teal-500 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-teal-600 transition-all duration-200 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center px-4 py-2 sm:px-7 sm:py-3 bg-gradient-to-r from-blue-600 to-teal-500 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-teal-600 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               Get Started Today
               <ChevronRight className="ml-2 h-5 w-5" />

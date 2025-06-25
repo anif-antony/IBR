@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ArrowRight, Target, Users, TrendingUp } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
