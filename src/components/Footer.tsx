@@ -15,7 +15,7 @@ const Footer = () => {
               src={logo}
               alt="Insight Business Reengineering Logo"
          
-            className="mt-4 h-20 sm:h-24 md:h-28 lg:h-28 xl:h-30 2xl:h-32 w-auto object-contain"/>
+            className="mt-4 h-20 sm:h-24 md:h-28 lg:h-28 xl:h-30 2xl:h-32 w-auto object-contain bg-white"/>
           </div>
             </div>
             <p className="text-gray-400 leading-relaxed mb-6">
