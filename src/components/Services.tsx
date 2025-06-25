@@ -1,4 +1,6 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { slideInFromLeft, slideInFromRight } from '../lib/utils';
 import { 
   Briefcase, 
   Users, 
@@ -45,7 +47,7 @@ const servicesData: Service[] = [
       'Employee Engagement & Retention',
       'Leadership Development Programs',
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1554224155-16954435172b?q=80&w=2070&auto=format&fit=crop'
+    imageUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop'
   },
   {
     icon: UserPlus,
@@ -113,10 +115,20 @@ const Services = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-teal-500 mx-auto mt-6"></div>
         </div>
         
-        <div className="space-y-24">
+        <div className="space-y-32">
           {servicesData.map((service, index) => (
-            <div key={index} className="grid lg:grid-cols-2 gap-x-16 gap-y-12 items-center">
-              <div className={`space-y-6 ${index % 2 !== 0 ? 'lg:order-last' : ''}`}>
+            <motion.div 
+              key={index} 
+              className="grid lg:grid-cols-2 gap-x-16 gap-y-12 items-center"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ staggerChildren: 0.3 }}
+            >
+              <motion.div 
+                className={`space-y-6 ${index % 2 !== 0 ? 'lg:order-last' : ''}`}
+                variants={index % 2 !== 0 ? slideInFromRight(0) : slideInFromLeft(0)}
+              >
                 <div className="flex items-center space-x-5">
                   <div className={`bg-gradient-to-r ${service.color} p-4 rounded-xl shadow-lg flex-shrink-0`}>
                     <service.icon className="h-8 w-8 text-white" />
@@ -137,16 +149,19 @@ const Services = () => {
                     ))}
                   </ul>
                 </div>
-              </div>
-              <div className="relative h-96 rounded-lg overflow-hidden shadow-xl">
+              </motion.div>
+              <motion.div 
+                className="relative h-96 rounded-lg overflow-hidden shadow-xl"
+                variants={index % 2 !== 0 ? slideInFromLeft(0) : slideInFromRight(0)}
+              >
                 <img 
                   src={service.imageUrl} 
                   alt={service.title} 
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           ))}
         </div>
         
