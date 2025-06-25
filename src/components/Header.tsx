@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Building2 } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import logo from '../assets/logo.png';
 
 const navItems = [
   { href: '#home', label: 'Home' },
@@ -16,8 +17,6 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-
-      // Find the currently visible section
       let current = '#home';
       for (const item of navItems) {
         const el = document.querySelector(item.href);
@@ -46,18 +45,16 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white/95 backdrop-blur-md shadow-lg'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          <div className="flex items-center space-x-3">
-            <div className="bg-gradient-to-r from-blue-700 to-blue-600 p-2 rounded-lg">
-              <Building2 className="h-6 w-6 text-white" />
-            </div>
-            <div>
-              <h1 className={`text-lg lg:text-xl font-bold transition-colors duration-300 ${isScrolled ? 'text-gray-900' : 'text-white'}`}>IBR</h1>
-              <p className={`text-xs text-gray-600 hidden sm:block transition-colors duration-300 ${isScrolled ? 'text-gray-600' : 'text-gray-200'}`}>Insight Business Reengineering</p>
-            </div>
+        <div className="flex items-center justify-between h-16 lg:h-24">
+          <div className="flex items-center">
+            <img
+              src={logo}
+              alt="Insight Business Reengineering Logo"
+              className="mt-4 h-12 sm:h-16 lg:h-28 w-auto object-contain"
+            />
           </div>
 
           <nav className="hidden lg:flex items-center space-x-8">
@@ -65,18 +62,12 @@ const Header = () => {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className={`font-medium transition-colors duration-200 relative group ${
-                  isScrolled
-                    ? 'text-gray-700 hover:text-blue-700'
-                    : 'text-white hover:text-gray-300'
-                } ${
-                  activeSection === item.href && isScrolled ? 'text-blue-700' : ''
+                className={`font-medium transition-colors duration-200 relative group text-black hover:text-blue-700 ${
+                  activeSection === item.href ? 'text-blue-700' : ''
                 }`}
               >
                 {item.label}
-                <span className={`absolute -bottom-1 left-0 h-0.5 transition-all duration-300 ${
-                  isScrolled ? 'bg-blue-700' : 'bg-white'
-                } ${
+                <span className={`absolute -bottom-1 left-0 h-0.5 transition-all duration-300 bg-blue-700 ${
                   activeSection === item.href ? 'w-full' : 'w-0 group-hover:w-full'
                 }`}></span>
               </button>
@@ -85,11 +76,7 @@ const Header = () => {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`lg:hidden p-2 rounded-md transition-colors duration-200 ${
-              isScrolled
-                ? 'text-gray-700 hover:text-blue-700 hover:bg-gray-100'
-                : 'text-white hover:bg-white/20'
-            }`}
+            className="lg:hidden p-2 rounded-md text-black hover:text-blue-700 hover:bg-gray-100 transition-colors duration-200"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -102,7 +89,7 @@ const Header = () => {
                 <button
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className={`block w-full text-left px-3 py-3 text-gray-700 hover:text-blue-700 hover:bg-gray-50 transition-colors duration-200 ${
+                  className={`block w-full text-left px-3 py-3 text-black hover:text-blue-700 hover:bg-gray-50 transition-colors duration-200 ${
                     activeSection === item.href ? 'text-blue-700' : ''
                   }`}
                 >
