@@ -1,6 +1,6 @@
 import React from 'react';
-import { Building2, Mail, Phone, MapPin } from 'lucide-react';
-
+import { Mail, Phone, MapPin } from 'lucide-react';
+import logo from '../assets/logo.png';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -10,13 +10,13 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="bg-gradient-to-r from-blue-600 to-teal-600 p-2 rounded-lg">
-                <Building2 className="h-6 w-6 text-white" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold">IBR</h3>
-                <p className="text-gray-400 text-sm">Insight Business Reengineering</p>
-              </div>
+               <div className="flex items-center">
+            <img
+              src={logo}
+              alt="Insight Business Reengineering Logo"
+         
+            className="mt-4 h-20 sm:h-24 md:h-28 lg:h-28 xl:h-30 2xl:h-32 w-auto object-contain"/>
+          </div>
             </div>
             <p className="text-gray-400 leading-relaxed mb-6">
               Your trusted partner for business transformation, helping organizations achieve sustainable growth 

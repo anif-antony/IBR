@@ -1,6 +1,7 @@
 import React from 'react';
 import { Heart, Shield, Users, Lightbulb, Award } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
+import hrImg from '../assets/HR.png';
 
 interface Value {
   icon: LucideIcon;
@@ -62,7 +63,7 @@ const About = () => (
         
         <div className="relative h-80 md:h-96">
           <img 
-            src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" 
+            src={hrImg}
             alt="Business team collaborating" 
             className="absolute inset-0 w-full h-full object-cover rounded-xl shadow-lg"
           />
