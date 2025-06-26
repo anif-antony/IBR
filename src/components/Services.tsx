@@ -40,6 +40,7 @@ const servicesData: Service[] = [
       'Organizational Transformation',
       'Process Improvement & Optimization',
       'Risk Management & Compliance',
+      'Development Support'
     ],
     imageUrl: businessImg,
   },
@@ -147,6 +148,7 @@ const Services = () => {
                       <li key={detailIndex} className="flex items-start space-x-1 sm:space-x-2">
                         <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-600 flex-shrink-0 mt-0.5" />
                         <span className="text-gray-700 text-xs sm:text-sm md:text-base">{detail}</span>
+
                       </li>
                     ))}
                   </ul>

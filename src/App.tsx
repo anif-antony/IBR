@@ -15,12 +15,13 @@ function App() {
         <AnimatedSection>
           <Hero />
         </AnimatedSection>
+             <AnimatedSection>
+          <About />
+        </AnimatedSection>
         <AnimatedSection>
           <Services />
         </AnimatedSection>
-        <AnimatedSection>
-          <About />
-        </AnimatedSection>
+   
         <AnimatedSection>
           <Contact />
         </AnimatedSection>

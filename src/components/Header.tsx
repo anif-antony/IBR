@@ -3,9 +3,10 @@ import { Menu, X } from 'lucide-react';
 import logo from '../assets/logo.png';
 
 const navItems = [
-  { href: '#home', label: 'Home' },
+  { href: '#home', label: 'Home' }, 
+  {href: '#about', label: 'About' },
   { href: '#services', label: 'Services' },
-  { href: '#about', label: 'About' },
+ 
   { href: '#contact', label: 'Contact' },
 ];
 
