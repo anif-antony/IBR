@@ -33,7 +33,7 @@ const servicesData: Service[] = [
   {
     icon: Briefcase,
     title: 'Business Consulting',
-    description: 'Strategic planning and organizational transformation to achieve your business goals.',
+    description: 'Our Business Consulting services focus on helping companies achieve their strategic goals while improving efficiency and profitability.',
     color: 'from-blue-600 to-blue-700',
     details: [
       'Strategic Planning & Execution',
@@ -46,7 +46,7 @@ const servicesData: Service[] = [
   {
     icon: Users,
     title: 'HR Consulting',
-    description: 'Align your workforce strategies with business objectives for maximum productivity.',
+    description: 'Our HR Consulting services are designed to align your workforce strategies with your business objectives, fostering an engaged and productive team.',
     color: 'from-teal-600 to-teal-700',
     details: [
       'HR Strategy & Framework Development',
@@ -59,7 +59,7 @@ const servicesData: Service[] = [
   {
     icon: UserPlus,
     title: 'Recruitment Consulting',
-    description: 'Find the right talent for your organization with our comprehensive recruitment solutions.',
+    description: 'Our Recruitment Consulting services ensure that you find the right talent, whether you’re looking for full-time employees or project-based professionals.',
     color: 'from-orange-600 to-orange-700',
     details: [
       'Full-Time Employee Recruitment (FTA)',
@@ -72,7 +72,7 @@ const servicesData: Service[] = [
   {
     icon: Settings,
     title: 'Operational Consulting',
-    description: 'Streamline processes and improve operational efficiency across your organization.',
+    description: 'Operational Consulting services focus on streamlining your business processes, improving efficiency, and driving profitability.',
     color: 'from-purple-600 to-purple-700',
     details: [
       'Business Process Reengineering (BPR)',
@@ -85,7 +85,7 @@ const servicesData: Service[] = [
   {
     icon: Monitor,
     title: 'IT Consulting',
-    description: 'Navigate digital transformation and adopt the right technology solutions.',
+    description: 'Our IT Consulting services guide businesses through the complex world of technology, helping them adopt the right digital solutions and stay ahead in the competitive landscape.',
     color: 'from-green-600 to-green-700',
     details: [
       'Digital Transformation',
@@ -98,7 +98,7 @@ const servicesData: Service[] = [
   {
     icon: TrendingUp,
     title: 'Marketing & Sales Consulting',
-    description: 'Boost market presence and increase revenue with strategic marketing solutions.',
+    description: 'Our Marketing and Sales Consulting services are designed to boost your market presence, enhance customer engagement, and increase revenue.',
     color: 'from-pink-600 to-pink-700',
     details: [
       'Go-to-Market Strategy Development',
