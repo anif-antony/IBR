@@ -22,12 +22,7 @@ const Footer = () => {
               Your trusted partner for business transformation, helping organizations achieve sustainable growth 
               through innovative consulting solutions.
             </p>
-            <div className="text-center">
-              <p className="text-sm text-gray-400 font-medium mb-2">Our Mission</p>
-              <p className="text-sm text-gray-300 italic">
-                "To be the foremost and trusted strategic business consultant in the field of consulting"
-              </p>
-            </div>
+         
           </div>
 
           <div>

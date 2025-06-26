@@ -87,6 +87,29 @@ const About = () => (
           ))}
         </div>
       </div>
+
+      {/* Mission & Vision Cards Section */}
+      <div className="mt-16 flex flex-col lg:flex-row justify-center items-stretch gap-10">
+        {/* Our Mission Card */}
+        <div className="bg-white shadow-xl rounded-xl px-6 py-8 max-w-xl w-full text-center border border-gray-100 mx-2 sm:mx-0 flex-1">
+          <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+          <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-teal-500 mx-auto mb-6"></div>
+          <p className="text-base sm:text-lg text-gray-700 italic mb-4">
+            “To be the foremost and trusted strategic business consultant in the field of consulting”
+          </p>
+          <p className="text-base sm:text-lg text-gray-700 italic">
+            “To help clients to visualize business differently and discover opportunities to achieve greater results”
+          </p>
+        </div>
+        {/* Our Vision Card */}
+        <div className="bg-white shadow-xl rounded-xl px-6 py-8 max-w-xl w-full text-center border border-gray-100 mx-2 sm:mx-0 flex-1">
+          <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
+          <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-teal-500 mx-auto mb-6"></div>
+          <p className="text-base sm:text-lg text-gray-700 italic">
+            To be recognized as the go-to partner for businesses seeking innovative solutions to overcome challenges and achieve sustainable growth.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 );
