@@ -13,10 +13,10 @@ import {
 import type { LucideIcon } from 'lucide-react';
 
 // Import local images
-import businessImg from '../assets/BC.png';
+import businessImg from '../assets/BC.webp';
 import hrImg from '../assets/HR.jpg';
 import recruitmentImg from '../assets/RC.jpg';
-import operationsImg from '../assets/OC.png';
+import operationsImg from '../assets/OC.avif';
 import itImg from '../assets/IT.jpg';
 import marketingImg from '../assets/MS.avif';
 

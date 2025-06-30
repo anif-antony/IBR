@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, Target, Users, TrendingUp } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import heroBg from '../assets/hero.png'; // Assuming you have a hero background image
+import heroBg from '../assets/hero.webp'; // Assuming you have a hero background image
 
 const Hero = () => {
   const { scrollY } = useScroll();
