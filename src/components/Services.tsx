@@ -14,10 +14,10 @@ import type { LucideIcon } from 'lucide-react';
 
 // Import local images
 import businessImg from '../assets/BC.png';
-import hrImg from '../assets/HR.png';
-import recruitmentImg from '../assets/RC.png';
+import hrImg from '../assets/HR.jpg';
+import recruitmentImg from '../assets/RC.jpg';
 import operationsImg from '../assets/OC.png';
-import itImg from '../assets/IT.png';
+import itImg from '../assets/IT.jpg';
 import marketingImg from '../assets/MS.avif';
 
 interface Service {
